@@ -14,8 +14,10 @@
 ############################################################
 
 # Set Mod key for i3wm
-# Mond4==Super
-set $mod Mod4
+# mod1:	alt
+set $alt Mod1
+# mod4:	Super
+set $super Mod4
 
 # Alternetive to arrow keys
 set $left h
@@ -64,44 +66,44 @@ font pango:System San Francisco Display 10
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
-# Use Mouse+$mod to drag floating windows to their wanted position
+# Use Mouse+$super to drag floating windows to their wanted position
 
-floating_modifier $mod
+floating_modifier $super
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $super+Shift+q kill
 
 # split in horizontal orientation
-bindsym $mod+$hor split h
+bindsym $super+$hor split h
 
 # split in vertical orientation
-bindsym $mod+$ver split v
+bindsym $super+$ver split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $super+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $super+s layout stacking
+bindsym $super+w layout tabbed
+bindsym $super+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $super+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $super+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $super+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+#bindsym $super+d focus child
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $super+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $super+Shift+r restart
 
 
 ############################################################
@@ -116,28 +118,28 @@ client.focused_inactive	$inactive-bg-colour	$inactive-bg-colour	$inactive-text-c
 client.urgent		$urgent-bg-colour	$urgent-bg-colour	$text-colour		#00ff00
 
 # change focus
-bindsym $mod+$left	focus	left
-bindsym $mod+$down	focus	down
-bindsym $mod+$up	focus	up
-bindsym $mod+$right	focus	right
+bindsym $super+$left	focus	left
+bindsym $super+$down	focus	down
+bindsym $super+$up	focus	up
+bindsym $super+$right	focus	right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left	focus	left
-bindsym $mod+Down	focus	down
-bindsym $mod+Up		focus	up
-bindsym $mod+Right	focus	right
+bindsym $super+Left	focus	left
+bindsym $super+Down	focus	down
+bindsym $super+Up		focus	up
+bindsym $super+Right	focus	right
 
 # move focused window
-bindsym $mod+Shift+$left	move	left
-bindsym $mod+Shift+$down	move	down
-bindsym $mod+Shift+$up		move	up
-bindsym $mod+Shift+$right	move	right
+bindsym $super+Shift+$left	move	left
+bindsym $super+Shift+$down	move	down
+bindsym $super+Shift+$up		move	up
+bindsym $super+Shift+$right	move	right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left		move	left
-bindsym $mod+Shift+Down		move	down
-bindsym $mod+Shift+Up		move	up
-bindsym $mod+Shift+Right	move	right
+bindsym $super+Shift+Left		move	left
+bindsym $super+Shift+Down		move	down
+bindsym $super+Shift+Up		move	up
+bindsym $super+Shift+Right	move	right
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -163,7 +165,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $super+r mode "resize"
 
 
 ############################################################
@@ -171,28 +173,28 @@ bindsym $mod+r mode "resize"
 ############################################################
 
 # switch to workspace
-bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3 
-bindsym $mod+4 workspace $workspace4 
-bindsym $mod+5 workspace $workspace5 
-bindsym $mod+6 workspace $workspace6 
-bindsym $mod+7 workspace $workspace7 
-bindsym $mod+8 workspace $workspace8 
-bindsym $mod+9 workspace $workspace9 
-bindsym $mod+0 workspace $workspace0  
+bindsym $super+1 workspace $workspace1
+bindsym $super+2 workspace $workspace2
+bindsym $super+3 workspace $workspace3 
+bindsym $super+4 workspace $workspace4 
+bindsym $super+5 workspace $workspace5 
+bindsym $super+6 workspace $workspace6 
+bindsym $super+7 workspace $workspace7 
+bindsym $super+8 workspace $workspace8 
+bindsym $super+9 workspace $workspace9 
+bindsym $super+0 workspace $workspace0  
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2 
-bindsym $mod+Shift+3 move container to workspace $workspace3 
-bindsym $mod+Shift+4 move container to workspace $workspace4 
-bindsym $mod+Shift+5 move container to workspace $workspace5 
-bindsym $mod+Shift+6 move container to workspace $workspace6 
-bindsym $mod+Shift+7 move container to workspace $workspace7 
-bindsym $mod+Shift+8 move container to workspace $workspace8 
-bindsym $mod+Shift+9 move container to workspace $workspace9 
-bindsym $mod+Shift+0 move container to workspace $workspace0
+bindsym $super+Shift+1 move container to workspace $workspace1
+bindsym $super+Shift+2 move container to workspace $workspace2 
+bindsym $super+Shift+3 move container to workspace $workspace3 
+bindsym $super+Shift+4 move container to workspace $workspace4 
+bindsym $super+Shift+5 move container to workspace $workspace5 
+bindsym $super+Shift+6 move container to workspace $workspace6 
+bindsym $super+Shift+7 move container to workspace $workspace7 
+bindsym $super+Shift+8 move container to workspace $workspace8 
+bindsym $super+Shift+9 move container to workspace $workspace9 
+bindsym $super+Shift+0 move container to workspace $workspace0
 
 ############################################################
 #	status bar
@@ -220,17 +222,17 @@ bar {
 ############################################################
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $super+Return exec i3-sensible-terminal
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $super+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $super+d exec --no-startup-id i3-dmenu-desktop
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $super+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
 
